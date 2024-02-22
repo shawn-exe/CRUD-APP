@@ -22,7 +22,7 @@ const AddUsers = () => {
     }
     return(
     <div style={{ margin: 'auto' }}>  
-        <Typography sx={{pl:10,pt:5}} variant="h5" >Add User</Typography>
+        <Typography sx={{pl:10,pt:5}} variant="h5" >Add Users</Typography>
         <FormGroup sx={{width:600, pl:9}}>
         <FormControl sx={{marginTop:2}} >
             <InputLabel>Name</InputLabel>
