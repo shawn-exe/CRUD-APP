@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import React from 'react'
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import { FormGroup,FormControl,InputLabel, Input ,Typography,Button} from '@mui/material'
 //setuser({...user,[e.target.name]:e.target.value}); here ...User is to Skip over writing if didnt use that then old values will be deleted while typing new values  
 //...user is called spreadding
@@ -15,11 +16,15 @@ const AddUsers = () => {
     const AddUser = (e) => {
         setuser({...user,[e.target.name]:e.target.value});
         console.log(user);
-    }  
+    } 
+
+    const navigate=useNavigate();//Creating an user instance of useNavigate;
 
     const submitAdd = async () => {
        await addUser(user);
+       navigate('/AllUsers');
     }
+
     return(
     <div style={{ margin: 'auto' }}>  
         <Typography sx={{pl:10,pt:5}} variant="h5" >Add Users</Typography>

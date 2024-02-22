@@ -8,3 +8,13 @@ export const addUser = async (data) =>{
         console.log('addUser error',error);
     }
 }
+
+export const getUsers =async () => 
+{
+    try{ 
+        return await axios.get(`${url}/getusers`);
+    }catch(error)
+    {
+        console.log("Error while retrieving users",error);
+    }
+}
